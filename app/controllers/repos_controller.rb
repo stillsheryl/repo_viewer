@@ -1,7 +1,6 @@
 class ReposController < ApplicationController
   def show
-    response = Faraday.get("https://api.github.com/users/#{params[:user]}/repos?per_page=1000")
-    @repos = JSON.parse(response.body, symbolize_names: true)
+    @repos = ReposFacade.public_repos(params[:user])
   end
 
   def show_private
