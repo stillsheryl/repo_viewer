@@ -1,19 +1,17 @@
 class RepoService
   def self.public_repos(user)
-    response = Faraday.get("https://api.github.com/users/#{user}/repos?per_page=1000")
+    response = Faraday.get("https://api.github.com/users/#{user}/repos?per_page=100")
 
     repos = JSON.parse(response.body, symbolize_names: true)
   end
 
   def self.private_repos(user, token)
-    response = Faraday.get("https://api.github.com/user/repos?per_page=1000") do |req|
+    response = Faraday.get("https://api.github.com/user/repos") do |req|
       req.headers['Authorization'] = "Bearer #{token}"
+      req.params['visibility'] = 'private'
+      req.params['per_page'] = 100
     end
 
-    repos_data = JSON.parse(response.body, symbolize_names: true)
-
-    repos = repos_data.find_all do |repo|
-      repo[:private] == true
-    end
+    JSON.parse(response.body, symbolize_names: true)
   end
 end
