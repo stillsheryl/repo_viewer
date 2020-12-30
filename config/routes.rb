@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#show'
 
   get '/users/:user/repos', to: 'repos#show'
+  get '/user/repos', to: 'repos#show_private'
 
 end
