@@ -1,6 +1,6 @@
 <h1>Your Private Repos</h1>
 
 <% @repos.each do |repo| %>
-  <h3><%= repo[:name] %></h3>
-  <p><%= link_to "Github Link", repo[:html_url] %></p><br>
+  <h3><%= repo.name %></h3>
+  <p><%= link_to "Github Link", repo.url %></p><br>
 <% end %>
