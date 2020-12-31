@@ -3,5 +3,5 @@
 <div class="wrapper">
   <%= button_to "View Public Repos", "/users/#{current_user.username}/repos", method: :get, class: "button" %><br>
 
-  <%= button_to "View Private Repos", "/user/repos", method: :get, class: "button" %>
+  <%= button_to "View Private Repos", user_repos_path, method: :get, class: "button" %>
 </div>
