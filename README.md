@@ -10,6 +10,7 @@ Video demo of the application
 
   - [Getting Started](#getting-started)
   - [Runing the tests](#running-the-tests)
+  - [Further Action](#further-action)
   - [Author](#author)
 
 ## Getting Started
@@ -67,6 +68,10 @@ To setup locally, follow these instructions:
 ## Running the tests
 
 Run the command `bundle exec rspec` in the terminal.  You should see 5 passing tests and 2 skipped tests. Testing is a work in progress.
+
+## Further Action
+
+If you're interested in using any additional repo endpoints, the documentation for the repositories endpoints I referenced can be found [here](https://docs.github.com/en/free-pro-team@latest/rest/reference/repos).
 
 ## Author
 
