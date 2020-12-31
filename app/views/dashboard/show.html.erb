@@ -1,5 +1,7 @@
 <h1>Welcome, <%= current_user.username %>!</h1>
 
-<%= link_to "View Public Repos", "/users/#{current_user.username}/repos" %><br><br>
+<div class="wrapper">
+  <%= button_to "View Public Repos", "/users/#{current_user.username}/repos", method: :get, class: "button" %><br>
 
-<%= link_to "View Private Repos", "/user/repos" %>
+  <%= button_to "View Private Repos", "/user/repos", method: :get, class: "button" %>
+</div>
