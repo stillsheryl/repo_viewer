@@ -23,8 +23,7 @@ This project was built using `Ruby 2.5.3`, `Rails 5.2.4.3` and `PostgreSQL` as t
 ### Local Setup
 
 To setup locally, follow these instructions:
-  * __Fork & Clone Repo__
-    * Fork this repo to your own GitHub account.
+  * __Clone Repo__
     * Clone and add the code to your local computer.
   * __Install Gems__
     * Install all gems in the Gemfile using the following commands:
@@ -55,13 +54,6 @@ To setup locally, follow these instructions:
     * Run `rake db:create` to create the database.
 
   * __Create OmniAuth Keys__
-    * Create a file `config/initializers/github.rb` and add the following code:
-      ```ruby
-      Rails.application.config.middleware.use OmniAuth::Builder do
-        provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
-      end
-      ```
-
     * Go to Github [Developer Settings](https://github.com/settings/developers) and create an OAuth App, which will provide you with the Client ID and the Client Secret you will need.
 
     * Reference the OmniAuth [documentation](https://github.com/omniauth/omniauth-github) for more information. This project is using an extra OmniAuth [gem](https://github.com/omniauth/omniauth/wiki/Resolving-CVE-2015-9284) to protect against CSRF attacks.
