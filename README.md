@@ -74,7 +74,7 @@ To setup locally, follow these instructions:
 
 ## Running the tests
 
-Run the command `bundle exec rspec` in the terminal.  You should see all passing tests.
+Run the command `bundle exec rspec` in the terminal.  You should see 5 passing tests and 2 skipped tests. Testing is a work in progress.
 
 ## Author
 
