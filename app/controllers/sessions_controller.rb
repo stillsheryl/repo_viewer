@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     session[:user_id] = user.id
 
-    redirect_to '/dashboard'
+    redirect_to dashboard_path
   end
 
   private

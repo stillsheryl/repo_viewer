@@ -1,9 +1,9 @@
 <h1>Your Public Repos</h1>
 
 <div class="wrapper">
-  <p><%= button_to "Back to Dashboard", '/dashboard', method: :get, class: "button" %></p>
+  <p><%= button_to "Back to Dashboard", dashboard_path, method: :get, class: "button" %></p>
 
-  <p><%= button_to "View Private Repos", "/user/repos", method: :get, class: "button" %></p>
+  <p><%= button_to "View Private Repos", user_repos_path, method: :get, class: "button" %></p>
 </div>
 
 <ul>
